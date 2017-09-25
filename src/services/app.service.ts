@@ -11,13 +11,13 @@ export class AppService {
   constructor(private http: Http) { }
   private baseUrl = '../assets/api/api.json';
 
-  //fn to convert observable data to json
+  // fn to convert observable data to json
   extractData(res: any) {
     const response = res.json();
     return response;
   }
 
-  //fn to fetch the data through an http call
+  // fn to fetch the data through an http call
   // call the api to consume people.json
   fetchDataJSON(): Observable<any> {
     // ...using get request
