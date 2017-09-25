@@ -1,0 +1,17 @@
+<div class="flex-container">
+  <div class="flex-child">
+    <h2>Results</h2>
+    <div (mouseover)='openDialog(item)' *ngFor="let item of result.results" class="flex-item">
+      <div [ngStyle]="{'background-color':  item.agency.brandingColors.primary }">
+        <img src="{{ item.agency.logo }}">
+      </div>
+      <div class="item-img">
+        <img src="{{ item.mainImage }}">
+      </div>
+      <div class="footer">
+        <p>{{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+  <app-item-property [(property)] = "result.saved"></app-item-property>
+</div>

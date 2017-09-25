@@ -1,0 +1,15 @@
+<div class="flex-child">
+  <h2>Saved Properties</h2>
+  <p *ngIf="showSavedProp">No Saved properties</p>
+  <div (mouseover)='openDialog(prop)' *ngFor="let prop of property" class="flex-item">
+    <div [ngStyle]="{'background-color':  prop.agency.brandingColors.primary }">
+      <img src="{{ prop.agency.logo }}">
+    </div>
+    <div class="item-img">
+      <img src="{{ prop.mainImage }}">
+    </div>
+    <div class="footer">
+      <p>{{ prop.price }}</p>
+    </div>
+  </div>
+</div>
