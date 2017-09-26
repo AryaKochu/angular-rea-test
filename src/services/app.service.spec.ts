@@ -36,7 +36,7 @@ describe('AppService', () => {
             'logo': 'http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif'
           },
           'id': '1',
-          'mainImage': 'http://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg'
+          'mainImage': 'http://main.jpg'
         }],
         'saved': [{
           'price': '$526,500',
@@ -47,7 +47,7 @@ describe('AppService', () => {
             'logo': 'http://i2.au.reastatic.net/agencylogo/WVYSSK/2/20140701084436.gif'
           },
           'id': '4',
-          'mainImage': 'http://i2.au.reastatic.net/640x480/5e84d96722dda3ea2a084d6935677f64872d1d760562d530c3cabfcb7bcda9c2/main.jpg'
+          'mainImage': 'http://main-saved.jpg'
         }]
       }
 
@@ -65,14 +65,13 @@ describe('AppService', () => {
         expect(data['results'].agency.brandingColors.primary).toEqual('#000000');
         expect(data['results'].agency.logo).toEqual('http://i2.au.reastatic.net/agencylogo/WVYSSK/2/20140701084436.gif');
         expect(data['results'].id).toEqual('4');
-        expect(data['results'].mainImage).toEqual('http://i2.au.reastatic.net/640x480/5e84d96722dda3ea2a084d6935677f64872d1d760562d530c3cabfcb7bcda9c2/main.jpg');
+        expect(data['results'].mainImage).toEqual('http://main.jpg');
         expect(data['saved']).toBeDefined();
         expect(data['saved'].price).toEqual('$526,500');
         expect(data['saved'].agency.brandingColors.primary).toEqual('#000000');
         expect(data['saved'].agency.logo).toEqual('http://i2.au.reastatic.net/agencylogo/WVYSSK/2/20140701084436.gif');
         expect(data['saved'].id).toEqual('4');
-        expect(data['saved'].mainImage).toEqual('http://i2.au.reastatic.net/640x480/5e84d96722dda3ea2a084d6935677f64872d1d760562d530c3cabfcb7bcda9c2/main.jpg');
-
+        expect(data['saved'].mainImage).toEqual('http://main-saved.jpg');
       });
     }));
 });
