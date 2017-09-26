@@ -1,20 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
-import { MdDialog } from '@angular/material';
+import { MdDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { DialogServiceComponent } from '../modal/app-dialog.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MdDialog],
+      imports: [MdDialogModule],
       declarations: [
         AppComponent,
       ],
     }).compileComponents();
   }));
 
-  it('should create the app', async(() => {
+  it('should create the landing component', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
@@ -30,4 +29,23 @@ describe('AppComponent', () => {
       expect(app.addProperties).toHaveBeenCalled();
     });
   });
+  it('should filter the pets "Cats" according to the gender of their owner and call sort function',
+    async(() => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const app = fixture.debugElement.componentInstance;
+      const item = {
+        'price': '$726,500',
+        'agency': {
+          'brandingColors': {
+            'primary': '#ffe512'
+          },
+          'logo': 'http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif'
+        },
+        'id': '1',
+        'mainImage': 'http://main.jpg'
+      };
+      app.addProperties(item);
+      console.log(app.result);
+    }));
 });
