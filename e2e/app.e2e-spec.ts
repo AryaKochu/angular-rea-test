@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('agl-test App', () => {
+describe('rea-test App', () => {
   let page: AppPage;
 
   beforeEach(() => {
