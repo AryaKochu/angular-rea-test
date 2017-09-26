@@ -29,7 +29,7 @@ describe('AppComponent', () => {
       expect(app.addProperties).toHaveBeenCalled();
     });
   });
-  it('should filter the pets "Cats" according to the gender of their owner and call sort function',
+  it('should remove the property selected on button click',
     async(() => {
       const fixture = TestBed.createComponent(AppComponent);
       fixture.detectChanges();
